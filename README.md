@@ -23,8 +23,6 @@ Default settings:
 - `showStatusCode`: false
 - `maxResponseChars`: 400
 - `postContentType`: "application/json"
-- `connectTimeoutMs`: 5000
-- `requestTimeoutMs`: 10000
 - `cooldownSeconds`: 5
 - `maxConcurrentRequests`: 4
 - `allowLocalTargets`: false

@@ -16,8 +16,6 @@ public class HttpCommandsConfig {
     public boolean showStatusCode = false;
     public int maxResponseChars = 400;
     public String postContentType = "application/json";
-    public int connectTimeoutMs = 5000;
-    public int requestTimeoutMs = 10000;
     public int cooldownSeconds = 5;
     public int maxConcurrentRequests = 4;
     public boolean allowLocalTargets = false;

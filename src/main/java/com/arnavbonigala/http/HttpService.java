@@ -23,8 +23,9 @@ public class HttpService {
     
     public HttpService(HttpCommandsConfig config) {
         this.config = config;
+        // Set effectively infinite timeout (100 years) to prevent any default timeouts
         this.httpClient = HttpClient.newBuilder()
-            .connectTimeout(Duration.ofMillis(config.connectTimeoutMs))
+            .connectTimeout(Duration.ofDays(365 * 100))
             .build();
     }
     
@@ -52,9 +53,10 @@ public class HttpService {
                 );
             }
             
+            // Set effectively infinite timeout (100 years) to prevent any default timeouts
             HttpRequest.Builder requestBuilder = HttpRequest.newBuilder()
                 .uri(uri)
-                .timeout(Duration.ofMillis(config.requestTimeoutMs));
+                .timeout(Duration.ofDays(365 * 100));
             
             if ("POST".equals(method)) {
                 requestBuilder.POST(HttpRequest.BodyPublishers.ofString(body))
