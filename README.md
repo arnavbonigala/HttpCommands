@@ -25,7 +25,7 @@ Default settings:
 - `postContentType`: "application/json"
 - `cooldownSeconds`: 5
 - `maxConcurrentRequests`: 4
-- `allowLocalTargets`: false
+- `allowLocalTargets`: true
 
 ## Building
 

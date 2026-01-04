@@ -18,7 +18,7 @@ public class HttpCommandsConfig {
     public String postContentType = "application/json";
     public int cooldownSeconds = 5;
     public int maxConcurrentRequests = 4;
-    public boolean allowLocalTargets = false;
+    public boolean allowLocalTargets = true;
     
     private static HttpCommandsConfig instance;
     private static Path configPath;
