@@ -1,6 +1,8 @@
 package com.arnavbonigala;
 
+import com.arnavbonigala.commands.HttpCommands;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,10 +17,13 @@ public class Httpcommands implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
+		// Register commands
+		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
+			LOGGER.info("Registering HttpCommands...");
+			HttpCommands.register(dispatcher);
+			LOGGER.info("HttpCommands registered successfully!");
+		});
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("HttpCommands mod initialized!");
 	}
 }

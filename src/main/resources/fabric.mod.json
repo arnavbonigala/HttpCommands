@@ -2,10 +2,10 @@
 	"schemaVersion": 1,
 	"id": "httpcommands",
 	"version": "${version}",
-	"name": "httpcommands",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "HttpCommands",
+	"description": "Adds /httpget and /httppost commands for making HTTP requests in singleplayer. Supports command blocks, rate limiting, and configurable safety controls.",
 	"authors": [
-		"Me!"
+		"arnavbonigala"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
